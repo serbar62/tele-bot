@@ -1,8 +1,8 @@
 import os
-from background import keep_alive  #импорт функции для поддержки работоспособности
-import pip
+# from background import keep_alive  #импорт функции для поддержки работоспособности
+# import pip
 
-pip.main(['install', 'pytelegrambotapi'])
+# pip.main(['install', 'pytelegrambotapi'])
 import telebot
 import time
 
@@ -75,6 +75,6 @@ def callback_message(callback):
                              parse_mode='HTML')
 
 
-keep_alive()
+# keep_alive()
 if __name__ == '__main__':
     bot.polling(none_stop=True)
