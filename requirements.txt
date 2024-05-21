@@ -1,2 +1,4 @@
 pytelegrambotapi==4.18.1
 requests==2.25.1
+Flask==2.0.1
+gunicorn==20.1.0
