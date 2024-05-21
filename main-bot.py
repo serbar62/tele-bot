@@ -50,7 +50,7 @@ def callback_message(callback):
 
     mess3 = (
         f'<b>Благодарю Вас за подписку на наш Telegram канал!</b>\nНадеюсь Вам будет интерсено!\n\nЧтобы получить книгу-инструкцию - ваш надёжный путеводитель в мире путешествий и подробный справочник онлайн сервисов, перейдите по ссылке  \n  \U0001F449'
-        f'https://vladenie-21.ru/podarok')
+        f'https://vladenie-21.ru/podar_Yr34.php')
 
     markup = types.InlineKeyboardMarkup()
     podpisats = types.InlineKeyboardButton('Подписаться \U0001F449',
