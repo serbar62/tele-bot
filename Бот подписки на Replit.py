@@ -13,7 +13,7 @@ bot = telebot.TeleBot('6701765680:AAFrEjwUvuta-u18ckiz1hadOvrPvAqqH10')
 
 #   CHAT_ID = -1002120996109
 #   USER_ID = 899527476
-#  '@vygodnoe_strahovanie'
+#  '@vygodnoe_strahovanie'    https://t.me/asiaa_travel
 #   callback.message.from_user.id
 
 
@@ -26,10 +26,9 @@ def start(message: types.Message):
         f'\n\nЕсли Вы уже подписаны, жмите кнопку <b>Получить книгу</b>')
 
     markup = types.InlineKeyboardMarkup()
-    podpisats = types.InlineKeyboardButton(
-        'Подписаться \U0001F449',
-        callback_data='yes',
-        url='https://t.me/vygodnoe_strahovanie')
+    podpisats = types.InlineKeyboardButton('Подписаться \U0001F449',
+                                           callback_data='yes',
+                                           url='https://t.me/asiaa_travel')
     podpisan = types.InlineKeyboardButton('Получить книгу', callback_data='no')
     markup.add(podpisats, podpisan)
 
@@ -54,16 +53,15 @@ def callback_message(callback):
         f'https://vladenie-21.ru/podarok')
 
     markup = types.InlineKeyboardMarkup()
-    podpisats = types.InlineKeyboardButton(
-        'Подписаться \U0001F449',
-        callback_data='yes',
-        url='https://t.me/vygodnoe_strahovanie')
+    podpisats = types.InlineKeyboardButton('Подписаться \U0001F449',
+                                           callback_data='yes',
+                                           url='https://t.me/asiaa_travel')
     podpisan = types.InlineKeyboardButton('Получить книгу', callback_data='no')
     markup.add(podpisats, podpisan)
 
     if callback.data == 'no':
         try:
-            res = bot.get_chat_member(chat_id='@vygodnoe_strahovanie',
+            res = bot.get_chat_member(chat_id='@asiaa_travel',
                                       user_id=callback.message.from_user.id)
             if res.status == 'member' or 'creator':
                 bot.send_message(callback.message.chat.id,
@@ -80,27 +78,3 @@ def callback_message(callback):
 keep_alive()
 if __name__ == '__main__':
     bot.polling(none_stop=True)
-
-
-
-===================================================================================================================
-
-from flask import Flask
-from flask import request
-from threading import Thread
-import time
-import requests
-
-
-app = Flask('')
-
-@app.route('/')
-def home():
-  return "I'm alive"
-
-def run():
-  app.run(host='0.0.0.0', port=80)
-
-def keep_alive():
-  t = Thread(target=run)
-  t.start()
