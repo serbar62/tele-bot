@@ -9,7 +9,7 @@ import time
 import telebot
 from telebot import types
 
-bot = telebot.TeleBot('6701765680:AAFrEjwUvuta-u18ckiz1hadOvrPvAqqH10')
+bot = telebot.TeleBot('')
 
 #   CHAT_ID = -1002120996109
 #   USER_ID = 899527476
